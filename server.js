@@ -32,6 +32,11 @@ wss.on('connection', (ws) => {
             sent_by_biz_member_id: parsedMessage.sent_by_biz_member_id || null, // 사업자 ID
         });
 
+        // chat_log_id
+        // contract_chat_id
+        // sent_by_member_id
+        // sent_by_biz_member_id
+
         // 받은 메시지를 모든 클라이언트에게 브로드캐스트합니다.
         wss.clients.forEach((client) => {
             if (client.readyState === WebSocket.OPEN) {
